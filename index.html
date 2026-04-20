@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halima Elfilali Ech-Chafiq — Ingénieure IA & Data | Portfolio</title>
+  <meta name="description" content="Portfolio de Halima Elfilali Ech-Chafiq, ingénieure en IA et Data Technologies à l'ENSAM Meknès. Projets en RAG, NLP, Computer Vision et Time Series.">
+  <meta property="og:title" content="Halima Elfilali — AI Engineer Portfolio">
+  <meta property="og:description" content="Projets IA avancés : RAG Chatbot, Prévision électrique, Gesture Control">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#171310">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cold: {
+              primary: "#171310",
+              secondary: "#231d18",
+              card: "#2b241f",
+              border: "#4b3f35",
+              indigo: "#9f8063",
+              cyan: "#cbb8a2",
+              text: "#f3ece4",
+              muted: "#b8a99a"
+            },
+            indigo: {
+              300: "#d5c3b0",
+              400: "#bb9f84",
+              500: "#9f8063"
+            },
+            amber: {
+              300: "#e8d7c3",
+              400: "#b49478",
+              500: "#9e7f64"
+            },
+            emerald: {
+              300: "#d3e2d4",
+              400: "#8ea491",
+              500: "#6f8576"
+            }
+          },
+          fontFamily: {
+            inter: ["Manrope", "sans-serif"],
+            mono: ["Space Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="site-header" aria-label="En-tete principal">
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="container nav-inner">
+        <a href="#accueil" class="brand" aria-label="Retour a l'accueil">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-core">HE</span>
+          <span class="brand-slash">/&gt;</span>
+        </a>
+
+        <ul class="nav-menu" role="list">
+          <li><a class="nav-link active" href="#accueil">Accueil</a></li>
+          <li><a class="nav-link" href="#projets">Projets</a></li>
+          <li><a class="nav-link" href="#competences">Compétences</a></li>
+          <li><a class="nav-link" href="#experience">Expérience</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <span class="nav-availability" aria-label="Disponible juillet 2026">
+          <span class="nav-availability-dot" aria-hidden="true"></span>
+          Disponible juillet 2026
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero" aria-labelledby="hero-title">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <p class="hero-badge" aria-label="Parcours actuel">
+          [ ENSAM Meknès · IADT:SI · 4ème Année ]
+        </p>
+
+        <h1 id="hero-title" class="hero-title">Halima Elfilali Ech-Chafiq</h1>
+
+        <div class="typewriter-wrap" aria-live="polite">
+          <span id="typewriter" class="typewriter-text" data-typewriter></span>
+          <span class="typewriter-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-description">
+          "A l'intersection de l'intelligence artificielle et de l'ingénierie industrielle, je construis des systèmes qui pensent, apprennent et transforment. Chaque ligne de code est une brique de l'industrie de demain."
+        </p>
+
+        <div class="hero-stats" aria-label="Chiffres clés">
+          <article class="stat-card fade-in">
+            <p class="stat-number" data-target="3" data-counter-target="3" data-counter-suffix="+">0+</p>
+            <p class="stat-label">Projets IA déployés</p>
+          </article>
+          <article class="stat-card fade-in">
+            <p class="stat-number" data-target="10" data-counter-target="10" data-counter-suffix="+">0+</p>
+            <p class="stat-label">Technologies maîtrisées</p>
+          </article>
+          <article class="stat-card fade-in">
+            <p class="stat-number" data-target="1" data-counter-target="1">0</p>
+            <p class="stat-label">Stage industriel (Sofafer)</p>
+          </article>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projets" class="btn btn-primary" aria-label="Explorer mes projets">
+            Explorer mes projets <span aria-hidden="true">→</span>
+          </a>
+          <a href="./docs/CV_Halima_ELFILALI.pdf" class="btn btn-secondary" download aria-label="Télécharger le CV de Halima Elfilali Ech-Chafiq">
+            ⬇ Télécharger CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="py-16 md:py-20 border-b border-cold-border fade-in" aria-labelledby="projets-title">
+      <div class="container">
+        <header class="mb-10">
+          <h2 id="projets-title" class="section-title">
+            <span class="prefix">//</span> Projets Techniques
+          </h2>
+          <p class="mt-3 text-cold-muted text-base md:text-lg">
+            Systèmes IA construits de la conception au déploiement
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="glow-card fade-in p-6 flex flex-col gap-5">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm text-cold-muted">Janvier 2026</p>
+              <span class="animate-pulse inline-flex items-center rounded-full border border-indigo-400/40 bg-indigo-500/15 px-3 py-1 text-xs font-medium font-mono text-indigo-300">[ FEATURED ]</span>
+            </div>
+            <h3 class="text-xl font-semibold text-cold-text">🔐 Grounded Hybrid RAG Chatbot with Hierarchical Access</h3>
+            <p class="text-cold-muted text-sm leading-relaxed">
+              Assistant IA multimodal sécurisé pour la gestion documentaire en entreprise. Architecture RAG hybride (dense + sparse retrieval) avec contrôle d'accès hiérarchique via <code>ltree</code> PostgreSQL pour prévenir les hallucinations et cloisonner les données par rôle utilisateur. Traitement de documents texte, PDF, audio et vidéo.
+            </p>
+            <ul class="space-y-2 text-sm text-cold-muted" role="list">
+              <li><span class="text-cold-cyan">✓</span> Prévention des hallucinations par grounding strict</li>
+              <li><span class="text-cold-cyan">✓</span> Contrôle d'accès RBAC avec hiérarchie ltree</li>
+              <li><span class="text-cold-cyan">✓</span> Pipeline multimodal : PDF + Audio (Faster-Whisper) + Vidéo (MoviePy) + OCR (PaddleOCR)</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Next.js 15</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">FastAPI</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Python</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Supabase</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Ollama</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">SentenceTransformers</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">PaddleOCR</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Faster-Whisper</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">PyMuPDF</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Tailwind CSS</span>
+            </div>
+            <div class="mt-auto flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">GitHub →</a>
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">Live Demo →</a>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6 flex flex-col gap-5">
+            <p class="text-sm text-cold-muted">Mai 2025</p>
+            <h3 class="text-xl font-semibold text-cold-text">Prévision de la Demande Électrique (Marché Espagnol)</h3>
+            <p class="text-cold-muted text-sm leading-relaxed">
+              Modèle de prévision de séries temporelles pour anticiper la demande électrique en Espagne en intégrant des données exogènes (météo, calendrier de jours fériés). Combinaison d'approches ML classiques et deep learning pour maximiser la précision. Dashboard interactif pour la visualisation des prévisions.
+            </p>
+            <ul class="space-y-2 text-sm text-cold-muted" role="list">
+              <li><span class="text-cold-cyan">✓</span> Ingénierie de features avancée (lag features, rolling statistics, Fourier features)</li>
+              <li><span class="text-cold-cyan">✓</span> Modèles : LSTM, TCN (Temporal Convolutional Network), XGBoost, Prophet</li>
+              <li><span class="text-cold-cyan">✓</span> Données externes : API REE (Red Eléctrica de España) + données météo</li>
+              <li><span class="text-cold-cyan">✓</span> Dashboard Streamlit interactif déployé</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Python</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">TensorFlow</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Scikit-learn</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Statsmodels</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Prophet</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Streamlit</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">REE API</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">NumPy</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Pandas</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Plotly</span>
+            </div>
+            <div class="mt-auto flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">GitHub →</a>
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">Dashboard →</a>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6 flex flex-col gap-5">
+            <p class="text-sm text-cold-muted">Avril 2025</p>
+            <h3 class="text-xl font-semibold text-cold-text">GestureMouseApp — Touchless Desktop Control</h3>
+            <p class="text-cold-muted text-sm leading-relaxed">
+              Application de contrôle de bureau sans contact physique, basée sur la détection de landmarks de la main en temps réel via webcam. Permet de contrôler le curseur, effectuer des clics, régler le volume et la luminosité, ainsi que défiler dans les pages uniquement par gestes. Interface PyQt5 avec chatbot FAQ intégré.
+            </p>
+            <ul class="space-y-2 text-sm text-cold-muted" role="list">
+              <li><span class="text-cold-cyan">✓</span> Détection en temps réel à 30+ FPS</li>
+              <li><span class="text-cold-cyan">✓</span> 15+ gestes distincts reconnus</li>
+              <li><span class="text-cold-cyan">✓</span> Visualisation live des landmarks MediaPipe</li>
+              <li><span class="text-cold-cyan">✓</span> Application desktop packagée (PyQt5)</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Python</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">OpenCV</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">MediaPipe</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">PyQt5</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">PyAutoGUI</span>
+            </div>
+            <div class="mt-auto flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">GitHub →</a>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6 flex flex-col gap-5 md:col-span-2 xl:col-span-1">
+            <div class="flex items-center justify-between gap-3">
+              <p class="text-sm text-cold-muted">2024 (Stage en entreprise)</p>
+              <span class="inline-flex items-center rounded-full border border-amber-400/40 bg-amber-500/15 px-3 py-1 text-xs font-medium font-mono text-amber-300">[ INDUSTRIE ]</span>
+            </div>
+            <h3 class="text-xl font-semibold text-cold-text">Stage Industriel : Sofafer — Gestion de Stock Intelligente</h3>
+            <p class="text-cold-muted text-sm leading-relaxed">
+              Stage au Département Informatique de <strong>Sofafer</strong> (sofafer.ma), entreprise industrielle marocaine. Développement d'une application complète de <strong>gestion de stock en temps réel</strong> impliquant les opérateurs terrain, avec base de données SQL et intégration d'une méthode d'approvisionnement automatique fondée sur la <strong>classification ABC des produits</strong> (analyse de Pareto). Pilotage du projet de bout en bout : conception, développement, mise en production.
+            </p>
+            <ul class="space-y-2 text-sm text-cold-muted" role="list">
+              <li><span class="text-cold-cyan">✓</span> Analyse ABC automatique pour optimisation des stocks</li>
+              <li><span class="text-cold-cyan">✓</span> Interface opérateurs terrain (temps réel)</li>
+              <li><span class="text-cold-cyan">✓</span> Base de données SQL structurée et requêtes optimisées</li>
+              <li><span class="text-cold-cyan">✓</span> Livraison en production dans un contexte industriel réel</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">SQL</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Python</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Gestion de Stock</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Méthode ABC</span>
+              <span class="px-2.5 py-1 rounded-md border border-cold-border bg-[#1e293b] font-mono text-xs">Analyse de données</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="py-16 md:py-20 border-b border-cold-border fade-in" aria-labelledby="competences-title">
+      <div class="container">
+        <header class="mb-10">
+          <h2 id="competences-title" class="section-title">
+            <span class="prefix">//</span> Stack Technique
+          </h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="glow-card fade-in p-6">
+            <h3 class="text-lg font-semibold mb-4">🤖 AI / Machine Learning</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">PyTorch</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">TensorFlow</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Scikit-learn</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Keras</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">XGBoost</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Prophet</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">tsfresh</span>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6">
+            <h3 class="text-lg font-semibold mb-4">👁 Computer Vision &amp; NLP</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">OpenCV</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">MediaPipe</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">YOLO</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Dlib</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">NLTK</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">spaCy</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">TextBlob</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">TesseractOCR</span>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6">
+            <h3 class="text-lg font-semibold mb-4">⚙️ Software &amp; Web Engineering</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Python</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Java</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">C/C++</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">R</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Julia</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">SQL</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">FastAPI</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Django</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Flask</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Next.js</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Spring Boot</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Node.js</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">React</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Vue.js</span>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6">
+            <h3 class="text-lg font-semibold mb-4">🗄️ Data &amp; Databases</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">NumPy</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Pandas</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Matplotlib</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Seaborn</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Plotly</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">MySQL</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">MongoDB</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Cassandra</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Supabase</span>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6 md:col-span-2 xl:col-span-1">
+            <h3 class="text-lg font-semibold mb-4">🛠️ DevOps &amp; Outils</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Docker</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Git</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">GitHub</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">GitLab</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">VS Code</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Streamlit</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Dash</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">LaTeX</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">MkDocs</span>
+              <span class="px-2.5 py-1 rounded-md border border-[#2d3748] bg-[#1e293b] font-mono text-xs">Colab</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-16 md:py-20 border-b border-cold-border fade-in" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="mb-10">
+          <h2 id="experience-title" class="section-title">
+            <span class="prefix">//</span> Parcours
+          </h2>
+        </header>
+
+        <div class="relative pl-8 md:pl-10">
+          <span class="absolute left-2 top-0 h-full w-px bg-indigo-500" aria-hidden="true"></span>
+
+          <div class="space-y-8">
+            <article class="relative glow-card fade-in p-5">
+              <span class="absolute -left-[1.68rem] top-6 h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1e]" aria-hidden="true"></span>
+              <p class="text-sm text-cold-muted">2021-2022</p>
+              <h3 class="text-lg font-semibold">Baccalauréat Sciences Math B</h3>
+              <p class="text-cold-muted text-sm">Lycée Abdelkrim Raiss, Fès · Mention acquise</p>
+            </article>
+
+            <article class="relative glow-card fade-in p-5">
+              <span class="absolute -left-[1.68rem] top-6 h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1e]" aria-hidden="true"></span>
+              <p class="text-sm text-cold-muted">2022-2024</p>
+              <h3 class="text-lg font-semibold">Cycle Préparatoire Intégré (CPGE)</h3>
+              <p class="text-cold-muted text-sm">ENSAM Meknès · Mathématiques, Physique, Informatique</p>
+            </article>
+
+            <article class="relative glow-card fade-in p-5">
+              <span class="absolute -left-[1.68rem] top-6 h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1e]" aria-hidden="true"></span>
+              <p class="text-sm text-cold-muted">2024</p>
+              <h3 class="text-lg font-semibold">Stage Industriel - Sofafer (Département Informatique)</h3>
+              <p class="text-cold-muted text-sm">Application de gestion de stock + classification ABC (SQL, Python)</p>
+            </article>
+
+            <article class="relative glow-card fade-in p-5">
+              <span class="absolute -left-[1.68rem] top-6 h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1e]" aria-hidden="true"></span>
+              <p class="text-sm text-cold-muted">2024-2027</p>
+              <h3 class="text-lg font-semibold">Cycle Ingénieur - IADT:SI</h3>
+              <p class="text-cold-muted text-sm">ENSAM Meknès · IA, Data Science, Systèmes Industriels, IoT, Lean Six Sigma</p>
+            </article>
+
+            <article class="relative glow-card fade-in p-5">
+              <span class="absolute -left-[1.68rem] top-6 h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1e]" aria-hidden="true"></span>
+              <p class="text-sm text-cold-muted">Juillet 2026</p>
+              <h3 class="text-lg font-semibold flex items-center gap-3">
+                Recherche de Stage Technique
+                <span class="animate-pulse inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1 text-xs font-medium font-mono text-emerald-300">OPEN TO OPPORTUNITIES</span>
+              </h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-20 border-b border-cold-border fade-in" aria-labelledby="about-title">
+      <div class="container">
+        <header class="mb-10">
+          <h2 id="about-title" class="section-title">
+            <span class="prefix">//</span> À Propos
+          </h2>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div class="glow-card fade-in p-6 md:p-8 space-y-5 text-cold-muted">
+            <p>
+              Ingénieure en devenir, formée à l'exigence des Arts et Métiers, je me situe à l'intersection précise où la rigueur de l'ingénierie industrielle rencontre la puissance de l'intelligence artificielle.
+            </p>
+            <p>
+              Mon parcours à l'ENSAM Meknès m'a appris qu'un modèle sans déploiement n'est qu'une hypothèse — c'est pourquoi je conçois des systèmes complets, de l'architecture jusqu'à la mise en production. Mon stage chez Sofafer m'a confirmé qu'une IA impactante, c'est avant tout une IA utile sur le terrain.
+            </p>
+            <p>
+              Animée par une curiosité insatiable et une vision à long terme — ingénieure, chercheuse, entrepreneuse — je cherche à rejoindre une équipe technique exigeante pour mon stage de juillet 2026, où je pourrai contribuer, apprendre et laisser une trace concrète.
+            </p>
+          </div>
+
+          <div class="glow-card fade-in p-6 md:p-8">
+            <h3 class="text-lg font-semibold mb-5">Soft Skills</h3>
+            <ul class="space-y-3 text-cold-muted" role="list">
+              <li>🔍 Pensée analytique &amp; esprit critique</li>
+              <li>🎯 Résolution méthodique de problèmes</li>
+              <li>⏱ Rigueur et organisation sous contraintes</li>
+              <li>🚀 Apprentissage rapide de nouveaux outils</li>
+              <li>💬 Communication claire et documentation soignée</li>
+              <li>🧘 Calme et ressources en situation de défi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-20 fade-in" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="mb-10">
+          <h2 id="contact-title" class="section-title">
+            <span class="prefix">//</span> Contact
+          </h2>
+          <p class="mt-3 text-cold-muted text-base md:text-lg">Disponible pour un stage technique · Juillet 2026</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="glow-card fade-in p-6 space-y-4">
+            <div>
+              <p class="text-sm text-cold-muted">Email</p>
+              <a href="mailto:h.elfilaliechchafiq@gmail.com" data-copy-email="h.elfilaliechchafiq@gmail.com" class="text-cold-cyan hover:text-cold-text transition-colors duration-300" aria-label="Envoyer un email à Halima Elfilali Ech-Chafiq">
+                h.elfilaliechchafiq@gmail.com
+              </a>
+            </div>
+            <div>
+              <p class="text-sm text-cold-muted">LinkedIn</p>
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">in/halima-elfilali-ech-chafiq</a>
+            </div>
+            <div>
+              <p class="text-sm text-cold-muted">GitHub</p>
+              <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">HalimaElfilaliEchChafiq</a>
+            </div>
+          </article>
+
+          <article class="glow-card fade-in p-6 space-y-4">
+            <div>
+              <p class="text-sm text-cold-muted">Téléphone</p>
+              <p>+212 633-297903</p>
+            </div>
+            <div>
+              <p class="text-sm text-cold-muted">Localisation</p>
+              <p>Maroc 🇲🇦</p>
+            </div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1.5 text-sm text-emerald-300">
+              <span class="nav-availability-dot" aria-hidden="true"></span>
+              Actuellement disponible
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cold-border py-8">
+    <div class="container flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <p class="text-sm text-cold-muted">© 2025 Halima Elfilali Ech-Chafiq · Ingénieure IA &amp; Data</p>
+        <p class="text-xs text-cold-muted/80">Construit avec passion · ENSAM Meknès · Morocco 🇲🇦</p>
+      </div>
+      <nav aria-label="Liens de pied de page" class="flex flex-wrap items-center gap-4 text-sm">
+        <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">LinkedIn</a>
+        <a href="#" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">GitHub</a>
+        <a href="mailto:h.elfilaliechchafiq@gmail.com" class="text-cold-cyan hover:text-cold-text transition-colors duration-300">Email</a>
+        <a href="./docs/CV_Halima_ELFILALI.pdf" download class="text-cold-cyan hover:text-cold-text transition-colors duration-300">CV Download</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
