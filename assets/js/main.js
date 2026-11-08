@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------------------------
   const typewriterPhrases = [
     "Future Ingénieure IA & Data",
-    "Spécialiste Vision par Ordinateur",
-    "Architecte RAG & Systèmes NLP",
+    "Spécialiste RAG & Agents IA",
+    "Architecte de Systèmes GenAI",
     "Passionnée d'IA Industrielle",
   ];
 
@@ -54,7 +54,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 2) Smooth scroll for all in-page anchor links
+  // 2) Mobile hamburger menu
+  // ---------------------------------------------------------------------------
+  const hamburger = document.getElementById("nav-hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", String(!isOpen));
+      navMenu.classList.toggle("is-open", !isOpen);
+    });
+
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("is-open");
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // 3) Smooth scroll for all in-page anchor links
   // ---------------------------------------------------------------------------
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -76,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ---------------------------------------------------------------------------
-  // 3) Navbar glassmorphism activation on scroll
+  // 4) Navbar glassmorphism activation on scroll
   // ---------------------------------------------------------------------------
   const navbar = document.querySelector(".navbar");
 
@@ -96,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateNavbarOnScroll();
 
   // ---------------------------------------------------------------------------
-  // 4) IntersectionObserver for fade-in + slide-up (.fade-in)
+  // 5) IntersectionObserver for fade-in + slide-up (.fade-in)
   // ---------------------------------------------------------------------------
   const fadeElements = document.querySelectorAll(".fade-in");
 
@@ -130,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 5) Animated hero counters (0 -> target in 1500ms with easing)
+  // 6) Animated hero counters (0 -> target in 1500ms with easing)
   // ---------------------------------------------------------------------------
   const counters = document.querySelectorAll("[data-counter-target]");
   const counterDuration = 1500;
@@ -182,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 6) Hero canvas particles (50 points, 5% opacity, lines if distance < 120px)
+  // 7) Hero canvas particles (50 points, 5% opacity, lines if distance < 120px)
   // ---------------------------------------------------------------------------
   const heroCanvas = document.getElementById("hero-canvas");
 
@@ -277,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 7) Email copy to clipboard + toast (2s)
+  // 8) Email copy to clipboard + toast (2s)
   // ---------------------------------------------------------------------------
   const copyEmailTrigger = document.querySelector("[data-copy-email]");
 
@@ -335,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 8) Active nav link tracking with IntersectionObserver
+  // 9) Active nav link tracking with IntersectionObserver
   // ---------------------------------------------------------------------------
   const navLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
 
